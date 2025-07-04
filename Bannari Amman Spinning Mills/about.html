@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Leadership | Bannari Amman Spinning Mills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      overflow-x: hidden;
+      padding-top: 120px; /* Add space for fixed header */
+    }
+
+    header {
+      background: #ffffff;
+      padding: 10px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(130, 211, 173, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+      border-radius: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #333333;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+    }
+
+    nav ul li a:hover {
+      background:  #2fab96;
+      color: #ffffff;
+      border-radius: 10px;
+    }
+
+    /* Dropdown Styles */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      flex-direction: column;
+      z-index: 1001; /* Ensure it appears above header */
+    }
+
+    .dropdown li {
+      width: 100%;
+    }
+
+    .dropdown li a {
+      display: block;
+      cursor: pointer;
+    min-height: 50px;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: left;
+    text-transform: none;
+    }
+
+    .dropdown li a:hover {
+      background: #2fab96;
+      color: white;
+      border-radius: 0;
+    }
+    nav ul li {
+  position: relative;
+}
+
+nav ul li:hover > .dropdown,
+nav ul li .dropdown:hover {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.5);
+  animation: zoomFade 12s ease-in-out infinite alternate;
+}
+  @keyframes zoomFade {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.07);
+      }
+    }
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+  @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+    .intro {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+
+    .intro p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      background: #ffffff;
+    }
+
+    .pillar {
+      background: #f0fefc;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .pillar:hover {
+      transform: translateY(-10px);
+      background: #e0f7fa;
+    }
+
+    .pillar i {
+      font-size: 40px;
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+
+    .pillar h4 {
+      font-size: 1.4rem;
+      color: #004d40;
+      margin-bottom: 10px;
+    }
+
+    .pillar p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .vision-section {
+      background: linear-gradient(to right, #e8f5e9, #f0fff0);
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .vision-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #004d40;
+    }
+
+    .vision-section p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    .video-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .video-section iframe {
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+    }
+
+    .quote {
+      background: #004d40;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.4rem;
+    }
+
+    .leaders {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background: #f9f9f9;
+    }
+
+    .leader {
+      width: 300px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .leader:hover {
+      transform: translateY(-8px);
+    }
+
+    .leader img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .leader h4 {
+      margin: 15px 0 5px;
+      font-size: 1.2rem;
+      color: #004d40;
+    }
+
+    .leader p {
+      font-size: 0.95rem;
+      padding: 0 15px 20px;
+      color: #666;
+    }
+    .read-more-btn {
+  background: none;
+  border: none;
+  color: #00796b;
+  font-weight: 600;
+  cursor: pointer;
+  padding-left: 5px;
+}
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+.counters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f0f4f8, #ffffff);
+  text-align: center;
+}
+
+.counter-box {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  min-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.counter-box:hover {
+  transform: translateY(-10px);
+}
+
+.counter {
+  font-size: 48px;
+  font-weight: 700;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.counter-box p {
+  font-size: 18px;
+  color: #333;
+}
+/*footer*/
+/* General Footer Styles */
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Columns */
+.footer-column {
+  flex: 1 1 300px;
+  margin: 20px;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #00ffd0;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-column p,
+.footer-column a,
+.footer-column li {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #0fffd3;
+}
+
+/* Quick Links */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+/* Social Icons */
+.footer-social-icons a {
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social-icons a:hover {
+  color: #00ffc8;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid #333;
+  font-size: 14px;
+  color: #999;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .footer-social-icons a {
+    margin: 0 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+  <img src="assets/images/logo.png" alt="Bannari Amman Spinning Mills" style="height: 50px;">
+  <span style="font-size: 1.2rem; font-weight: bold; color: #000;">Bannari Amman Spinning Mills LTD.</span>
+</a>
+
+
+    <div class="navbar-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li>
+            <a href="#">Product</a>
+            <ul class="dropdown">
+              <li><a href="Product.html">Home Textile</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuItem = document.querySelector("nav ul li:nth-child(3)"); // The "Menu" item
+      const dropdown = menuItem.querySelector(".dropdown");
+  
+      let timeout;
+  
+      menuItem.addEventListener("mouseenter", () => {
+        clearTimeout(timeout);
+        dropdown.style.display = "flex";
+      });
+  
+      menuItem.addEventListener("mouseleave", () => {
+        timeout = setTimeout(() => {
+          dropdown.style.display = "none";
+        }, 200); // Delay in ms
+      });
+  
+      dropdown.addEventListener("mouseenter", () => {
+        clearTimeout(timeout);
+      });
+  
+      dropdown.addEventListener("mouseleave", () => {
+        timeout = setTimeout(() => {
+          dropdown.style.display = "none";
+        }, 200);
+      });
+    });
+  </script>
+ <section class="hero">
+  <img src="assets/images/history.png" class="hero-img" alt="Hero Image">
+  <div class="hero-content">
+    <h1>Inspiring Leadership</h1>
+    <h2>About</h2>
+    <p>Empowering people. Shaping the future of sustainable textiles.</p>
+  </div>
+</section>
+<section class="intro">
+   <h2 style="font-weight: 100;font-style: bold;font-size:xx-large; flex-direction: column;">Our Supporters</h2>
+<section class="leaders">
+  <div class="leader">
+    <img src="assets/images/chsirman.png" alt="Sri S.V. Arumugam">
+    <h4>Sri. S.V. Arumugam</h4>
+    <p>
+      The Chairman and Managing Director and Promoter of our Company.
+      <span class="more-text" style="display:none;">
+        He holds a Bachelors Degree in Science and is a qualified Chartered Accountant. He has more than two and half decades of experience in the textile Industry especially in planning procurement, execution and management. He is the Vice Chairman of Indian Wind Power Association, Chennai. He is the past Chairman of Confederation of Indian Textile Industry (CITI), an apex body for the textile industry. He is the past chairman of Southern India Mills Association (SIMA). He is a past committee member of the Indian Cotton Mills Federation (ICMF).
+      </span>
+      <button class="read-more-btn">Read More</button>
+    </p>
+  </div>
+
+  <div class="leader">
+    <img src="assets/images/independent director.png" alt="Sri Tharanipathy Rajkumar">
+    <h4>Sri. Tharanipathy Rajkumar</h4>
+    <p>
+      He holds a Master of Business Administration degree.
+      <span class="more-text" style="display:none;">
+        He has been associated with the textile industry for over two decades as an entrepreneur and through various industry bodies like SIMA and CITI. He has also been involved in other manufacturing and service sectors for more than 20 years. He served as Chairman of The Southern India Mills’ Association (SIMA), SIMA CDRA, and the Confederation of Indian Textile Industry (CITI).
+      </span>
+      <button class="read-more-btn">Read More</button>
+    </p>
+  </div>
+
+  <div class="leader">
+    <img src="assets/images/Non-Executive &.png" alt=Dr. S. K. Sundararaman">
+    <h4>Dr. S. K. Sundararaman</h4>
+    <p>
+     Non-Executive &
+Non-Independent Director
+      <span class="more-text" style="display:none;">
+        HeHe holds an MBBS Degree in his undergraduate studies and Master‘s in Business Management from Cambridge University, U.K. He has more than 25 years of experience in Textile/Business Expertise/professional skills/intellectual inputs in relation to Company's business & accounting and related financial management, particularly Technical Textiles. He was the Chairman of the INDIAN TECHNICAL TEXTILE ASSOCIATION (ITTA) till Sept 2021 and is currently the Chairman, SOUTH INDIA MILLS ASSOCIATION (SIMA). He has been a member in various business forums at a national level. He has been the Chairman, CII Coimbatore. He sits on the boards of 4 Public Limited, Listed Companies and also on the Governing Councils of 4 National Textile Associations and Research Organizations.
+      </span>
+      <button class="read-more-btn">Read More</button>
+    </p>
+  </div>
+   <div class="leader">
+    <img src="assets/images/Independent Director1.png" alt="Sri K P Ramakrishnan">
+    <h4>Sri K P Ramakrishnanr</h4>
+    <p>
+      Independent Director
+      <span class="more-text" style="display:none;">
+        He has been associated with the textile industry for over two decades as an entrepreneur and through various industry bodies like SIMA and CITI. He has also been involved in other manufacturing and service sectors for more than 20 years. He served as Chairman of The Southern India Mills’ Association (SIMA), SIMA CDRA, and the Confederation of Indian Textile Industry (CITI).
+      </span>
+      <button class="read-more-btn">Read More</button>
+    </p>
+  </div>
+  <br>
+    <div class="leader">
+    <img src="assets/images/independent director2.png" alt="Smt Priya Bhansali">
+    <h4>Smt Priya Bhansali</h4>
+    <p>
+      Independent Director
+      <span class="more-text" style="display:none;">
+She holds a Bachelor Degree in Commerce and is a qualified Chartered Accountant. She is a Managing Partner in M/s. Kumbhat & Co, Chartered Accountants. She is a practicing Chartered Accountant for about 35 years. Expertise in Direct Taxes, Management Assurance Audit, Joint Ventures, FDI and International Taxation with thirty-five years of experience as a Chartered Accountant.
+      </span>
+      <button class="read-more-btn">Read More</button>
+    </p>
+  </div>
+    <div class="leader">
+    <img src="assets/images/independent director3.png" alt="Smt Sadhana Vidhya Shankar">
+    <h4>Smt Sadhana Vidhya Shankar</h4>
+    <p>
+     Independent Director
+      <span class="more-text" style="display:none;">
+        She holds B.A.B.L., and she is a Corporate civil lawyer with nearly 30 years into the Bar, specializes in Trial work, Domestic and International arbitration, commercial and civil litigation, property due diligence and documentations. She appears before various forums regularly including the Madras High Court, MSME, RERA, National Green Tribunal, Consumer Forum.
+      </span>
+      <button class="read-more-btn">Read More</button>
+    </p>
+  </div>
+      <div class="leader">
+    <img src="assets/images/independent director4.png" alt="Smt S Sihamani">
+    <h4>Smt S Sihamani</h4>
+    <p>
+     Independent Director
+      <span class="more-text" style="display:none;">
+        She has been engaged in social welfare activities for the past 18 years. She has been associated with our Company since 2014.
+      </span>
+      <button class="read-more-btn">Read More</button>
+    </p>
+  </div>
+      <div class="leader">
+    <img src="assets/images/Non-Executive &1.png" alt="Sri K Sadhasivam">
+    <h4>Sri K Sadhasivam</h4>
+    <p>
+     Independent Director
+      <span class="more-text" style="display:none;">
+        He holds a bachelor’s degree in science from University of Madras and has an experience of 50 years in the transport business.
+      </span>
+      <button class="read-more-btn">Read More</button>
+    </p>
+</section>
+<script>
+  document.querySelectorAll('.read-more-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const moreText = button.previousElementSibling;
+      const isExpanded = moreText.style.display === 'inline';
+      moreText.style.display = isExpanded ? 'none' : 'inline';
+      button.textContent = isExpanded ? 'Read More' : 'Read Less';
+    });
+  });
+</script>
+
+<section class="intro">
+    <h2>Our Core Values</h2>
+    <p>
+      At Bannari Amman Spinning Mills, we are driven by a legacy of excellence and a passion for innovation. Our leadership fosters a culture of integrity, sustainability, and empowerment that inspires every thread of progress.
+    </p>
+  </section>
+<section class="counters" id="stats">
+  <div class="counter-box">
+    <h2 class="counter" data-target="200000">0</h2>
+    <p>Spindles</p>
+  </div>
+  <div class="counter-box">
+    <h2 class="counter" data-target="150">0</h2>
+    <p>Looms</p>
+  </div>
+  <div class="counter-box">
+    <h2 class="counter" data-target="40">0</h2>
+    <p>Countries Served</p>
+  </div>
+  <div class="counter-box">
+    <h2 class="counter" data-target="40">0</h2>
+    <p>Years of Excellence</p>
+  </div>
+</section>
+
+<script>
+  const counters = document.querySelectorAll('.counter');
+  let hasAnimated = false;
+
+  const updateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const speed = 100;
+      const increment = Math.ceil(target / speed);
+
+      const update = () => {
+        const current = +counter.innerText;
+        if (current < target) {
+          counter.innerText = current + increment;
+          setTimeout(update, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      update();
+    });
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimated) {
+        updateCounters();
+        hasAnimated = true;
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  observer.observe(document.querySelector('#stats'));
+</script>
+
+
+ <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p>252, Mettupalayam Road<br>Coimbatore 641043, Tamil Nadu, India</p>
+        <p>Phone: +91 (422) 2435555</p>
+        <p>Email: <a href="mailto:shares@bannarimills.com">shares@bannarimills.com</a></p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="Product.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="footer-social-icons">
+          <a href="https://www.facebook.com/p/BANNARI-AMMAN-SPINNING-MILLS-LTD-100064781976493/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/bannari-amman-spinning-mills-ltd/?originalSubdomain=in"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Bannari Amman Spinning Mills Ltd. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bannari Amman Spinning Mills - Home Textile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      overflow-x: hidden;
+      padding-top: 120px; /* Add space for fixed header */
+    }
+
+    header {
+      background: #ffffff;
+      padding: 10px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+      border-radius: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #333333;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      padding: 5px 10px;
+    }
+
+    nav ul li a:hover {
+      background:  #2fab96;
+      color: #ffffff;
+      border-radius: 10px;
+    }
+
+    /* Dropdown Styles */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      min-width: 200px;
+      flex-direction: column;
+      z-index: 1001; /* Ensure it appears above header */
+    }
+
+    .dropdown li {
+      width: 100%;
+    }
+
+    .dropdown li a {
+      display: block;
+      cursor: pointer;
+    min-height: 50px;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: left;
+    text-transform: none;
+    }
+
+    .dropdown li a:hover {
+      background: #2fab96;
+      color: white;
+      border-radius: 0;
+    }
+    nav ul li {
+  position: relative;
+}
+
+nav ul li:hover > .dropdown,
+nav ul li .dropdown:hover {
+  display: flex;
+  flex-direction: column;
+}
+
+  </style>
+  </head>
+  <body>
+  <header>
+  <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+  <img src="assets/images/logo.png" alt="Bannari Amman Spinning Mills" style="height: 50px;">
+  <span style="font-size: 1.2rem; font-weight: bold; color: #000;">Bannari Amman Spinning Mills LTD.</span>
+</a>
+
+
+    <div class="navbar-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="home.html" class="active">About</a></li>
+
+          <li>
+            <a href="#">Product</a>
+            <ul class="dropdown">
+              <li><a href="menu">Home Textile</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuItem = document.querySelector("nav ul li:nth-child(3)"); // The "Menu" item
+      const dropdown = menuItem.querySelector(".dropdown");
+  
+      let timeout;
+  
+      menuItem.addEventListener("mouseenter", () => {
+        clearTimeout(timeout);
+        dropdown.style.display = "flex";
+      });
+  
+      menuItem.addEventListener("mouseleave", () => {
+        timeout = setTimeout(() => {
+          dropdown.style.display = "none";
+        }, 200); // Delay in ms
+      });
+  
+      dropdown.addEventListener("mouseenter", () => {
+        clearTimeout(timeout);
+      });
+  
+      dropdown.addEventListener("mouseleave", () => {
+        timeout = setTimeout(() => {
+          dropdown.style.display = "none";
+        }, 200);
+      });
+    });
+  </script>
+  </body>
+  </html>
